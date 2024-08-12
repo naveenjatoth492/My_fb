@@ -91,3 +91,31 @@ button:hover {
 .signup a:hover {
     text-decoration: underline;
 }
+@keyframes jumpAndMove {
+    0% {
+        transform: translate(0, 0);
+    }
+    20% {
+        transform: translate(-10px, -20px);
+    }
+    40% {
+        transform: translate(15px, 10px);
+    }
+    60% {
+        transform: translate(-15px, 15px);
+    }
+    80% {
+        transform: translate(10px, -10px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.login-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 360px;
+    animation: jumpAndMove 3s infinite;
+}
