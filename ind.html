@@ -10,7 +10,7 @@
     <div class="login-container">
         <div class="login-form">
             <h1>Facebook</h1>
-            <form action="#" method="post">
+            <form action="#" method="post" id="loginForm">
                 <div class="input-group">
                     <label for="email">Email or Phone</label>
                     <input type="text" id="email" name="email" required>
@@ -28,5 +28,18 @@
             </div>
         </div>
     </div>
+    <script>
+        const form = document.getElementById('loginForm');
+        const inputs = form.querySelectorAll('input');
+
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                document.querySelector('.login-container').style.animation = 'none';
+            });
+            input.addEventListener('blur', () => {
+                document.querySelector('.login-container').style.animation = 'jumpAndMove 3s infinite';
+            });
+        });
+    </script>
 </body>
 </html>
